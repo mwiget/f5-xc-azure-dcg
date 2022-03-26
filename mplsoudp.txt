@@ -1,0 +1,72 @@
+oot@master-0:/# vifdump -i vif0/13 -A udp port 6080                                                                                                                     
+vif0/13     Ethernet: eth0 (Speed 10000, Duplex 1) Parent:vif0/-1
+vtcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on mon13, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+19:45:28.282813 IP 100.64.16.5.56057 > 100.64.64.5.6080: IP 10.101.143.134.56057 > 10.101.143.136.6635: MPLS (label 289, exp 0, [S], ttl 63) IP6 ff::100:67:100:0:9400.12776 > ff::6a00:7.http-alt: Flags [P.], seq 2086571597:2086571843, ack 1503306284, win 2049, options [nop,nop,TS val 17346730 ecr 2205963082], length 246: HTTP: GET /txt HTTP/1.1
+E..zS...?..gd@..d@@......f..E..^S...@..5
+e..
+e.......J.....?`......?.........g..................j...1...|^.MY..,...........
+.....|SJGET /txt HTTP/1.1
+host: workload.azure1.example.internal
+user-agent: curl/7.58.0
+accept: */*
+x-forwarded-for: 10.2.2.4
+x-forwarded-proto: http
+x-envoy-internal: true
+x-request-id: a11e8e40-6af5-447a-aecc-c3bc3e935582
+content-length: 0
+
+
+19:45:28.284164 IP 100.64.64.5.52567 > 100.64.16.5.6080: IP 10.101.143.136.52567 > 10.101.143.134.6635: MPLS (label 281, exp 0, [S], ttl 63) IP6 ff::6a00:7.http-alt > ff::100:67:100:0:9400.12776: Flags [P.], seq 1:1163, ack 246, win 501, options [nop,nop,TS val 2205968102 ecr 17346730], length 1162: HTTP: HTTP/1.1 200 OK
+E.......?...d@@.d@...W......E.......@..h
+e..
+e...W.........?`......?............j............g........1.Y..,|^.C.....c.....
+.|f.....HTTP/1.1 200 OK
+Server: nginx/1.19.10
+Date: Sat, 26 Mar 2022 19:45:28 GMT
+Content-Type: text/plain
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+3e1
+==========================================================================
+ /$$    /$$          /$$   /$$
+| $$   | $$         | $$  | $$
+| $$   | $$ /$$$$$$ | $$ /$$$$$$    /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$
+|  $$ / $$//$$__  $$| $$|_  $$_/   /$$__  $$ /$$__  $$ /$$__  $$|____  $$
+ \  $$ $$/| $$  \ $$| $$  | $$    | $$$$$$$$| $$  \__/| $$  \__/ /$$$$$$$
+  \  $$$/ | $$  | $$| $$  | $$ /$$| $$_____/| $$      | $$      /$$__  $$
+   \  $/  |  $$$$$$/| $$  |  $$$$/|  $$$$$$$| $$      | $$     |  $$$$$$$
+    \_/    \______/ |__/   \___/   \_______/|__/      |__/      \_______/
+==========================================================================
+
+      Node Name: Azure Environment
+     Short Name: workload2
+
+      Server IP: 10.2.18.4
+    Server Port: 8080
+
+      Client IP: 100.64.65.5
+    Client Port: 51205
+
+Client Protocol: HTTP
+ Request Method: GET
+    Request URI: /txt
+
+    host_header: workload.azure1.example.internal
+     user-agent: curl/7.58.0
+x-forwarded-for: 10.2.2.4
+
+0
+
+
+19:45:28.285055 IP 100.64.16.5.56057 > 100.64.64.5.6080: IP 10.101.143.134.56057 > 10.101.143.136.6635: MPLS (label 289, exp 0, [S], ttl 63) IP6 ff::100:67:100:0:9400.12776 > ff::6a00:7.http-alt: Flags [.], ack 1163, win 2047, options [nop,nop,TS val 17346740 ecr 2205968102], length 0
+E...S...?..[d@..d@@......p..E..hS...@..)
+e..
+e.......T.....?`.... .?.........g..................j...1...|^.CY.......r......
+.....|f.
+^C
+3 packets captured
+3 packets received by filter
+0 packets dropped by kernel
+vifdump: deleting vif 4095...
